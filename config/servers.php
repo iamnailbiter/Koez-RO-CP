@@ -4,7 +4,7 @@ return array(
 	// specify multiple server groups (however they should share the same login
 	// server whilst they are allowed to have multiple char/map pairs).
 	array(
-		'ServerName'     => 'FluxRO',
+		'ServerName'     => 'Reckoning',
 		// Global database configuration (excludes logs database configuration).
 		'DbConfig'       => array(
 			//'Socket'     => '/tmp/mysql.sock',
@@ -14,11 +14,11 @@ return array(
 				// -- 'Convert' option only works when 'Encoding' option is specified and iconv (http://php.net/iconv) is available.
 				// -- It specifies the encoding to convert your MySQL data to on the website (most likely needs to be utf8)
 			'Hostname'   => '127.0.0.1',
-			'Username'   => 'ragnarok',
-			'Password'   => 'ragnarok',
-			'Database'   => 'ragnarok',
+			'Username'   => 'koez_ragnarok',
+			'Password'   => 'ragnarok17112015',
+			'Database'   => 'koez_ragnarok',
 			'Persistent' => true,
-			'Timezone'   => null // Example: '+0:00' is UTC.
+			'Timezone'   => 'Asia/Jakarta' // Example: '+0:00' is UTC.
 			// The possible values of 'Timezone' is as documented from the MySQL website:
 			// "The value can be given as a string indicating an offset from UTC, such as '+10:00' or '-6:00'."
 			// "The value can be given as a named time zone, such as 'Europe/Helsinki', 'US/Eastern', or 'MET'." (see below continuation!)
@@ -35,11 +35,11 @@ return array(
 				// -- 'Convert' option only works when 'Encoding' option is specified and iconv (http://php.net/iconv) is available.
 				// -- It specifies the encoding to convert your MySQL data to on the website (most likely needs to be utf8)
 			'Hostname'   => '127.0.0.1',
-			'Username'   => 'ragnarok',
-			'Password'   => 'ragnarok',
-			'Database'   => 'ragnarok',
+			'Username'   => 'koez_ragnarok',
+			'Password'   => 'ragnarok17112015',
+			'Database'   => 'koez_ragnarok_log',
 			'Persistent' => true,
-			'Timezone'   => null // Possible values is as described in the comment in DbConfig.
+			'Timezone'   => 'Asia/Jakarta' // Possible values is as described in the comment in DbConfig.
 		),
 		// Login server configuration.
 		'LoginServer'    => array(
@@ -52,36 +52,36 @@ return array(
 		),
 		'CharMapServers' => array(
 			array(
-				'ServerName'      => 'FluxRO',
+				'ServerName'      => 'Reckoning',
 				'Renewal'         => true,
 				'MaxCharSlots'    => 9,
-				'DateTimezone'    => null, // Specifies game server's timezone for this char/map pair. (See: http://php.net/timezones)
+				'DateTimezone'    => 'Asia/Jakarta', // Specifies game server's timezone for this char/map pair. (See: http://php.net/timezones)
 				//'ResetDenyMaps'   => 'sec_pri', // Defaults to 'sec_pri'. This value can be an array of map names.
 				//'Database'        => 'ragnarok', // Defaults to DbConfig.Database
-				'MaxBaseLevel'    => 150,
+				'MaxBaseLevel'    => 175,
 				'ExpRates' => array(
-					'Base'        => 100, // Rate at which (base) exp is given
-					'Job'         => 100, // Rate at which job exp is given
-					'Mvp'         => 100  // MVP bonus exp rate
+					'Base'        => 130000, // Rate at which (base) exp is given
+					'Job'         => 110000, // Rate at which job exp is given
+					'Mvp'         => 130000  // MVP bonus exp rate
 				),
 				'DropRates' => array(
 					// The rate the common items (in the ETC tab, besides card) are dropped
-					'Common'      => 100,
-					'CommonBoss'  => 100,
+					'Common'      => 100000,
+					'CommonBoss'  => 10000,
 					// The rate healing items (that restore HP or SP) are dropped
-					'Heal'        => 100,
-					'HealBoss'    => 100,
+					'Heal'        => 100000,
+					'HealBoss'    => 10000,
 					// The rate usable items (in the item tab other then healing items) are dropped
-					'Useable'     => 100,
-					'UseableBoss' => 100,
+					'Useable'     => 100000,
+					'UseableBoss' => 10000,
 					// The rate at which equipment is dropped
-					'Equip'       => 100,
-					'EquipBoss'   => 100,
+					'Equip'       => 10000,
+					'EquipBoss'   => 1000,
 					// The rate at which cards are dropped
-					'Card'        => 100,
-					'CardBoss'    => 100,
+					'Card'        => 100000,
+					'CardBoss'    => 500,
 					// The rate adjustment for the MVP items that the MVP gets directly in their inventory
-					'MvpItem'     => 100
+					'MvpItem'     => 10000
 				),
 				'CharServer'      => array(
 					'Address'     => '127.0.0.1',
