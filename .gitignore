@@ -1,36 +1,19 @@
-/.buildpath
-/build/
-*/archive/
- 
 __MACOSX
 .DS_Store
- 
-.project
-.settings
-.classpath
-.sass-cache/
- 
-# OS generated files #
-######################
-*/.DS_Store
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-Icon?
-ehthumbs.db
-Thumbs.db
- 
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
+
+/data/items/icons/*.png
+/data/items/images/*.png
+
+/data/jobs/images/F/*.gif
+/data/jobs/images/M/*.gif
+
+/data/monsters/*.png
+
+/data/logs/errors
+/data/logs/mail
+/data/logs/mysql
+/data/logs/schemas
+/data/logs/transactions
+
+/data/tmp/*.php
+/data/tmp/*.cache
