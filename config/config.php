@@ -17,12 +17,12 @@
 <?php
 // Database Settings
 $CONFIG['sql_host']			=	'localhost';                    // SQL Host
-$CONFIG['sql_username']		=	'localhost';                    // SQL Username
-$CONFIG['sql_password']		=	'localhost';                    // SQL Password
-$CONFIG['sql_dbname']		=	'localhost';                    // Ragnarok Database Name
-$CONFIG['sql_cpdbname']		=	'localhost';                    // Stargames Control Panel Database
+$CONFIG['sql_username']		=	'koez_ragnarok';                    // SQL Username
+$CONFIG['sql_password']		=	'ragnarok17112015';                    // SQL Password
+$CONFIG['sql_dbname']		=	'koez_ragnarok';                    // Ragnarok Database Name
+$CONFIG['sql_cpdbname']		=	'koez_ragnarok_cp';                    // Stargames Control Panel Database
 $CONFIG['mysql_charset']	=	'auto';                         // MySQL charset (auto, tis620, UTF8 and etc)
-$CONFIG['server_name']		=	'Ragnarok Online';              // Server Name
+$CONFIG['server_name']		=	'Reckoning Ragnarok Online';              // Server Name
 $CONFIG['language']			=	'English';                      // Default CP Language (English or Thai)
 $CONFIG['default_theme']	=	'MorrocGrey';                   // Default CP Theme
 $CONFIG['time_offset']		=	'GMT+0700';                     // Time Zone (default : GMT+0700)
@@ -36,8 +36,8 @@ $CONFIG['smtp_host']		=	'localhost';                    // SMTP Host (Default: l
 $CONFIG['smtp_port']		=	'25';                           // SMTP Port (default: 25)
 
 // Main Page Settings
-$CONFIG['language_select_mode']			=	'0';                // Enable Language Select? (0: Disable 1: Enable)
-$CONFIG['theme_select_mode']			=	'0';                // Enable Theme Select? (0: Disable 1: Enable)
+$CONFIG['language_select_mode']			=	'1';                // Enable Language Select? (0: Disable 1: Enable)
+$CONFIG['theme_select_mode']			=	'1';                // Enable Theme Select? (0: Disable 1: Enable)
 $CONFIG['show_ro_news_per']				=	'10';               // How many news lines on Homepage?
 $CONFIG['show_last_topic_reply']		=	'1';                // Show Last Topic Reply on Homepage? (0: No 1: Yes)
 $CONFIG['show_last_topic_reply_per']	=	'5';                // How many Last Topic reply lines on Homepage?
@@ -60,8 +60,8 @@ $CONFIG['min_groupid_ranking']	=	'1';            // Minimum Group Level to not s
 $CONFIG['guild_per_page']		=	'50';           // How many guild lines on Guild Ranking Page?
 
 // Registration Settings
-$CONFIG['register_mode']		=	'2';            // Registration Mode (0: Closed 1: Enable 2: Enable with E-Mail Activation)
-$CONFIG['md5_support']			=	'0';            // Use MD5 Encryption? (0: No 1: Yes)
+$CONFIG['register_mode']		=	'1';            // Registration Mode (0: Closed 1: Enable 2: Enable with E-Mail Activation)
+$CONFIG['md5_support']			=	'1';            // Use MD5 Encryption? (0: No 1: Yes)
 $CONFIG['security_mode']		=	'3';            // Registration-Security Code Mode (0: Unuse 1: Number 2: Alphabet 3: Number and Alphabet)
 
 // Login Settings
@@ -76,10 +76,10 @@ $CONFIG['manage_zeny_mode']	=	'0';                // Can members manage their ze
 $CONFIG['max_zeny']			=	'1000000000';       // Max Zeny for Characters? (default: 1000000000) - EXPLOITABLE
 
 // Status Server Settings
-$CONFIG['check_server']			=	'0';            // Check Server Status? (0: No 1: Yes)
+$CONFIG['check_server']			=	'1';            // Check Server Status? (0: No 1: Yes)
 $CONFIG['maintenance']			=	'0';            // Use Maintenance Mode? (0: No 1: Yes)
-$CONFIG['time_check_intervals']	=	'120';          // Time intervals for checking server status (In Seconds)
-$CONFIG['server_ip']			=	'127.0.0.1';    // Server IP Address
+$CONFIG['time_check_intervals']	=	'30';          // Time intervals for checking server status (In Seconds)
+$CONFIG['server_ip']			=	'123.255.201.1';    // Server IP Address
 $CONFIG['loginport']			=	'6900';         // Login Port
 $CONFIG['charport']				=	'6121';         // Character Port
 $CONFIG['mapport']				=	'5121';         // Map Port
