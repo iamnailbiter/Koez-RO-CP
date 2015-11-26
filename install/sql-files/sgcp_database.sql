@@ -10,14 +10,14 @@ CREATE TABLE `mainnews` (
   `poster` text NOT NULL,
   `date` varchar(255) NOT NULL,
   PRIMARY KEY  (`post_id`)
-) TYPE=MyISAM AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;
 
 DROP TABLE IF EXISTS `privilege`;
 CREATE TABLE `privilege` (
   `account_id` int(11) NOT NULL default '0',
   `privilege` int(11) NOT NULL default '0',
   PRIMARY KEY  (`account_id`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 INSERT INTO `privilege` VALUES (20000000,5);
 
 DROP TABLE IF EXISTS `bugreport`;
@@ -29,7 +29,7 @@ CREATE TABLE `bugreport` (
   `ip` varchar(255) NOT NULL,
   `date` varchar(255) NOT NULL,
   PRIMARY KEY  (`post_id`)
-) TYPE=MyISAM AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;
 
 DROP TABLE IF EXISTS `forum`;
 CREATE TABLE `forum` (
@@ -39,7 +39,7 @@ CREATE TABLE `forum` (
   `forum_description` varchar(255) default '',
   `forum_perm` mediumtext NOT NULL,
   PRIMARY KEY  (`forum_id`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 INSERT INTO `forum` (category_id,forum_title,forum_description,forum_perm) VALUES ('1','A Test Forum','A test forum that may be removed at any time','[g1]:show_perm::read_perm::reply_perm::start_perm:[/g1][g2]:show_perm::read_perm::reply_perm::start_perm:[/g2][g3][/g3][g4]:show_perm::read_perm::reply_perm::start_perm:[/g4][g5]:show_perm::read_perm::reply_perm::start_perm:[/g5]');
 
 DROP TABLE IF EXISTS `board_reply`;
@@ -56,7 +56,7 @@ CREATE TABLE `board_reply` (
   `reply_edit_name` varchar(255) default '',
   `reply_edit_date` varchar(255) default '',
   PRIMARY KEY  (`reply_id`)
-) TYPE=MyISAM; 
+) ENGINE=MyISAM; 
 
 DROP TABLE IF EXISTS `board_topic`;
 CREATE TABLE `board_topic` (
@@ -73,7 +73,7 @@ CREATE TABLE `board_topic` (
   `topic_start_date` varchar(255) default '',
   `topic_last_action_date` varchar(255) default '',
   PRIMARY KEY  (`topic_id`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 DROP TABLE IF EXISTS `user_profile`;
 CREATE TABLE `user_profile` (
@@ -92,7 +92,7 @@ CREATE TABLE `user_profile` (
   `user_last_login` varchar(255) default '',
   `user_online` tinyint(1) default '0',
   PRIMARY KEY  (`user_number`)
-) TYPE=MyISAM; 
+) ENGINE=MyISAM; 
 
 DROP TABLE IF EXISTS `status`;
 CREATE TABLE `status` (
@@ -101,13 +101,13 @@ CREATE TABLE `status` (
   `char` int(11) NOT NULL default '0',
   `map` int(11) NOT NULL default '0',
   PRIMARY KEY  (`last_checked`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 DROP TABLE IF EXISTS `user_online`;
 CREATE TABLE `user_online` (
   `session` char(100) NOT NULL,
   `time` int(11) DEFAULT '0' NOT NULL
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 DROP TABLE IF EXISTS `poll`;
 CREATE TABLE `poll` (
@@ -127,7 +127,7 @@ CREATE TABLE `poll` (
   `choice9` text,
   `choice10` text,
   PRIMARY KEY  (`poll_id`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 DROP TABLE IF EXISTS `poll_vote`;
 CREATE TABLE `poll_vote` (
@@ -144,7 +144,7 @@ CREATE TABLE `poll_vote` (
   `vote9` int(11) default '0',
   `vote10` int(11) default '0',
   PRIMARY KEY  (`poll_id`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 DROP TABLE IF EXISTS `voters`;
 CREATE TABLE `voters` (
@@ -154,7 +154,7 @@ CREATE TABLE `voters` (
   `topic_id` varchar(255) default '',
   `member_id` varchar(255) default '',
   PRIMARY KEY  (`vid`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 DROP TABLE IF EXISTS `groups`;
 CREATE TABLE `groups` (
@@ -198,7 +198,7 @@ CREATE TABLE `groups` (
   `g_forum_manage` tinyint(1),
   `g_account_manage` tinyint(1),
   PRIMARY KEY  (`g_id`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 INSERT INTO `groups` VALUES (1,'Guest','guest.gif','',1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 INSERT INTO `groups` VALUES (2,'Member','member.gif','',1,1,1,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 INSERT INTO `groups` VALUES (3,'Banned','banned.gif','gray',1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
@@ -215,20 +215,20 @@ CREATE TABLE `query_log` (
   `query` text NOT NULL,
   PRIMARY KEY  (`action_id`),
   KEY `action_id` (`action_id`)
-) TYPE=MyISAM AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;
 
 DROP TABLE IF EXISTS `ranking_ignore`;
 CREATE TABLE `ranking_ignore` (
   `account_id` int(11) NOT NULL default '0',
   PRIMARY KEY  (`account_id`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 DROP TABLE IF EXISTS `security_code`;
 CREATE TABLE `security_code` (
   `sc_id` text NOT NULL,
   `sc_code` varchar(11) NOT NULL default '0',
   `sc_time` int(11) NOT NULL default '0'
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 DROP TABLE IF EXISTS `rank_title`;
 CREATE TABLE `rank_title` (
@@ -236,7 +236,7 @@ CREATE TABLE `rank_title` (
   `title` varchar(255) NOT NULL default '0',
   `min_post` int(11) NOT NULL default '0',
   PRIMARY KEY  (`title_id`)
-) TYPE=MyISAM AUTO_INCREMENT=1;
+) ENGINE=MyISAM AUTO_INCREMENT=1;
 INSERT INTO `rank_title` VALUES (1,'Baby',0);
 INSERT INTO `rank_title` VALUES (2,'Child',10);
 INSERT INTO `rank_title` VALUES (3,'Adult',30);
@@ -258,7 +258,7 @@ CREATE TABLE `register_log` (
   `ip` varchar(100) NOT NULL default '',
   PRIMARY KEY  (`reg_id`),
   KEY (`account_id`)
-) TYPE=MyISAM AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;
 
 DROP TABLE IF EXISTS `memory`;
 CREATE TABLE `memory` (
@@ -268,7 +268,7 @@ CREATE TABLE `memory` (
   `memory_value2` varchar(255) default '',
   `memory_value3` text,
   PRIMARY KEY  (`memory_id`)
-) TYPE=MyISAM; 
+) ENGINE=MyISAM; 
 INSERT INTO `memory` (memory_object,memory_value1) VALUES ('sgcp_install','1');
 INSERT INTO `memory` (memory_object,memory_value1) VALUES ('ro_message','Administrator');
 INSERT INTO `memory` (memory_object,memory_value1,memory_value2,memory_value3) VALUES ('forum_category','1','1','A Test Category');

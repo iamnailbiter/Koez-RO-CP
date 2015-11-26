@@ -93,7 +93,6 @@ echo "
 		<TR class=\"topic_title6\">
 			<TD align=\"right\">
 				$lang[Reg_pass2] :
-
 			</TD>
 			<TD>
 				<input name=\"userpass2\" type=\"password\" size=\"20\" maxlength=\"24\" class=\"textinput\" onblur=\"check_reg('pass2')\">
@@ -103,7 +102,6 @@ echo "
 		<TR class=\"topic_title6\">
 			<TD align=\"right\">
 				$lang[Reg_sls_pass] :
-
 			</TD>
 			<TD>
 				<input name=\"userslspass\" type=\"password\" size=\"20\" maxlength=\"24\" class=\"textinput\" onblur=\"check_reg('slspass')\">
@@ -113,7 +111,6 @@ echo "
 		<TR class=\"topic_title6\">
 			<TD align=\"right\">
 				$lang[Reg_sls_pass2] :
-
 			</TD>
 			<TD>
 				<input name=\"userslspass2\" type=\"password\" size=\"20\" maxlength=\"24\" class=\"textinput\" onblur=\"check_reg('slspass2')\">
@@ -123,7 +120,6 @@ echo "
 		<TR class=\"topic_title6\">
 			<TD align=\"right\">
 				$lang[Reg_sex] :
-
 			</TD>
 			<TD>
 				<select name=\"sex\" class=\"textinput\">
@@ -135,7 +131,6 @@ echo "
 		<TR class=\"topic_title6\">
 			<TD align=\"right\">
 				$lang[Reg_email] :
-
 			</TD>
 			<TD>
 				<input name=\"email\" type=\"text\" size=\"20\" class=\"textinput\" onblur=\"check_reg('email')\">
@@ -149,7 +144,6 @@ echo "
 		<TR class=\"topic_title6\">
 			<TD align=\"right\">
 				$lang[Reg_security_code] :
-
 			</TD>
 			<TD>
 				<img src=\"reg_code.php?sc=$sc_id\"><BR>
@@ -159,7 +153,6 @@ echo "
 		<TR class=\"topic_title6\">
 			<TD align=\"right\">
 				$lang[Reg_security_code_confirm] :
-
 			</TD>
 			<TD>
 				<input name=\"security_code\" type=\"text\" size=\"20\" maxlength=\"6\" class=\"textinput\">
@@ -205,7 +198,6 @@ if (!$CONFIG_register_mode) {
 			$query = "SELECT userid FROM $CONFIG_sql_dbname.login WHERE userid = \"".mysql_res($POST_userid)."\"";
 			$sql->result = $sql->execute_query($query,'register.php');$sql->total_query++;
 			$count1 = $sql->count_rows();
-
 			$query = "SELECT email FROM $CONFIG_sql_dbname.login WHERE email = \"".$POST_email."\"";
 			$sql->result = $sql->execute_query($query,'register.php');$sql->total_query++;
 			$count2 = $sql->count_rows();
@@ -231,26 +223,13 @@ if (!$CONFIG_register_mode) {
 					$mail_subject = "Registration Confirmation ( SGCP user registration confirmation )";
 					$mail_messages = sprintf("
 $lang[EMA_mes_1]
-
-
 $lang[EMA_mes_2]
-
-
 $lang[EMA_mes_3]
-
 $lang[EMA_mes_4]
-
 $lang[EMA_mes_5]
-
 $lang[EMA_mes_3]
-
-
 $lang[EMA_mes_6]
-
-
 $active_url
-
-
 $lang[EMA_mes_7]
 %s.
 ",$CONFIG_server_name,$POST_userid,$POST_userpass,$CONFIG_server_name);
